@@ -1,0 +1,13 @@
+useDynLib(stealrugarch,.registration = TRUE)
+import(zoo)
+import(xts)
+import(methods)
+import(rugarch)
+importFrom("stats", "na.omit")
+importFrom(Rsolnp, solnp, gosolnp, startpars)
+importFrom(nloptr, nloptr)
+importFrom(numDeriv, jacobian, hessian, grad)
+export("stealugarchspec", "stealugarchfit")
+
+export("fnc")
+exportMethods("getspec", "setfixed<-", "setstart<-")
